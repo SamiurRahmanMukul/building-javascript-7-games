@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(e);
       }
 
-      alert("Sorry! Try again.");
+      alert("Sorry! No match. Try again.");
     }
 
     cardChosen = [];
