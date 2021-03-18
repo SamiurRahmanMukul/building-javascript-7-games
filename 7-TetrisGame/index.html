@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS Game / Tetris Game</title>
+    <meta charset="utf-8" />
+    <title>Tetris Game</title>
 
     <!-- style / css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- favicon -->
     <link
@@ -15,150 +20,63 @@
       type="image/png"
     />
   </head>
+
   <body>
-    <button>Start</button>
+    <div class="menu-wrap">
+      <input type="checkbox" class="toggler" />
 
-    <h1 class="score-display">0</h1>
-    <h1 class="lines-display">0</h1>
+      <div class="hamburger">
+        <div></div>
+      </div>
 
-    <div class="previous-shape">
-      <div class="previous-grid">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+      <div class="menu">
+        <div class="menu-content">
+          <h2 class="t-ucase">rules</h2>
+          <p class="rules">
+            Please use the <b class="key">UP</b> key to rotate your tetromino,
+            and <b class="key">LEFT</b> and <b class="key">RIGHT</b> to <br />
+            move across the board. Pressing <b class="key">DOWN</b> will speed
+            up the tetromino.
+          </p>
+
+          <button class="close fw-400">X</button>
+        </div>
       </div>
     </div>
 
-    <div class="game">
-      <div class="grid">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div></div>
-        <div class="block"></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <header>
+      <h1 class="fw-300 t-ucase">
+        Welcome <br /><span class="fw-400 t-wide t-big t-ucase">to tetris</span>
+      </h1>
+    </header>
 
-        <div class="block3"></div>
-        <div class="block3"></div>
-        <div class="block3"></div>
-        <div class="block3"></div>
-        <div class="block3"></div>
-        <div class="block3"></div>
-        <div class="block3"></div>
-        <div class="block3"></div>
-        <div class="block3"></div>
-        <div class="block3"></div>
+    <main class="game-area">
+      <div class="game">
+        <div class="grid"></div>
       </div>
-    </div>
 
-    <!-- js / script -->
-    <script src="./assets/js/app.js"></script>
+      <section>
+        <div class="display">
+          <h1 class="score fw-400 t-ucase">
+            Your Score <br />
+            <span class="score-display t-ucase fw-300">0</span>
+          </h1>
+
+          <div class="previous-shape">
+            <div class="previous-grid"></div>
+          </div>
+
+          <h2 class="lines-display fw-400 t-ucase">
+            Lines:<span class="lines-score">0</span>
+          </h2>
+        </div>
+
+        <button class="button t-ucase" href="#">Start / Pause</button>
+        <small class="footer t-ucase">made with love 2019</small>
+      </section>
+    </main>
+
+    <!-- javascript / script -->
+    <script src="./assets/js/app.js" charset="utf-8"></script>
   </body>
 </html>
